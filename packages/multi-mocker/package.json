@@ -1,0 +1,35 @@
+{
+  "name": "multi-mocker",
+  "version": "1.0.0",
+  "scripts": {
+    "build:ajax": "vite build --config vite.config.ajax.js",
+    "build:wssse": "vite build --config vite.config.wssse.js",
+    "build": "npm run build:ajax && npm run build:wssse",
+    "prepublishOnly": "pnpm run build",
+    "clean:dist": "rimraf dist",
+    "clean:deps": "rimraf node_modules",
+    "clean:all": "pnpm run clean:dist && pnpm run clean:deps"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "mockjs": "^1.1.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "rimraf": "6.0.1",
+    "vite": "^6.3.5"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./dist/ajax/index.js",
+    "./ajax": "./dist/ajax/index.js",
+    "./vite-plugin-wssse": "./dist/vite-plugin-wssse/index.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ]
+}

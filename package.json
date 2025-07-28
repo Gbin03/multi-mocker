@@ -1,0 +1,21 @@
+{
+  "name": "monorepo-multi-mocker",
+  "type": "module",
+  "version": "1.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.8.1",
+  "scripts": {
+    "demo": "pnpm --filter demo dev",
+    "mocker-build": "pnpm --filter multi-mocker build",
+    "publish:mocker": "pnpm --filter multi-mocker publish",
+    "clean:dist": "pnpm --filter multi-mocker clean:dist && pnpm --filter demo clean:dist",
+    "clean:deps": "rimraf node_modules pnpm-lock.yaml && pnpm --filter multi-mocker clean:deps && pnpm --filter demo clean:deps",
+    "clean:all": "pnpm run clean:dist && pnpm run clean:deps",
+    "postinstall": "pnpm run mocker-build"
+  },
+  "license": "MIT",
+  "description": "monorepo-multi-mocker",
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}

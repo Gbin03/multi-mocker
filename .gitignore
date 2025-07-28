@@ -1,0 +1,10 @@
+**/node_modules/
+**/dist/
+**/build/
+**/coverage/
+**/temp/
+**/logs/
+**/.vscode/
+**/.idea/
+**/.git/
+**/.DS_Store
