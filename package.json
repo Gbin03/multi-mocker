@@ -7,7 +7,7 @@
   "scripts": {
     "demo": "pnpm --filter demo dev",
     "mocker-build": "pnpm --filter multi-mocker build",
-    "publish:mocker": "pnpm --filter multi-mocker publish",
+    "publish:mocker": "pnpm publish --filter multi-mocker",
     "clean:dist": "pnpm --filter multi-mocker clean:dist && pnpm --filter demo clean:dist",
     "clean:deps": "rimraf node_modules pnpm-lock.yaml && pnpm --filter multi-mocker clean:deps && pnpm --filter demo clean:deps",
     "clean:all": "pnpm run clean:dist && pnpm run clean:deps",

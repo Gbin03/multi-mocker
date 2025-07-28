@@ -8,7 +8,8 @@
     "prepublishOnly": "pnpm run build",
     "clean:dist": "rimraf dist",
     "clean:deps": "rimraf node_modules",
-    "clean:all": "pnpm run clean:dist && pnpm run clean:deps"
+    "clean:all": "pnpm run clean:dist && pnpm run clean:deps",
+    "publish": "pnpm publish"
   },
   "author": "",
   "license": "MIT",
